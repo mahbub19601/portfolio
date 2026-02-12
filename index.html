@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Mahbubul Haque Ripon | AI & ML Engineer</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.3);
+            --gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; gap: 2rem; }
+        
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .btn-nav {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            color: var(--accent) !important;
+        }
+        
+        .btn-nav:hover {
+            background: var(--accent);
+            color: var(--bg-dark) !important;
+        }
+
+        /* --- Hero Section --- */
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero-subtitle {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--bg-dark);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 30px var(--accent-glow); }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-primary);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* --- Skills Section --- */
+        section { padding: 6rem 10%; }
+
+        .section-header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header span {
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            display: block;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-card h3 { margin-bottom: 1rem; font-size: 1.25rem; }
+
+        .skill-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-list li i { color: var(--accent); margin-right: 8px; font-size: 0.8rem; }
+
+        /* --- Featured Projects --- */
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+        }
+
+        .project-content { padding: 2.5rem; }
+
+        .project-overline {
+            color: var(--accent);
+            font-family: monospace;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .project-title { font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary); }
+
+        .project-desc { color: var(--text-secondary); margin-bottom: 1.5rem; }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .project-links { display: flex; gap: 1.5rem; }
+        .project-links a { font-size: 1.2rem; }
+        .project-links a:hover { color: var(--accent); }
+
+        /* --- About & Education --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .edu-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        .edu-year { color: var(--accent); font-family: monospace; font-size: 0.9rem; margin-bottom: 0.5rem; display: block;}
+        .edu-school { color: var(--text-secondary); font-size: 0.9rem; }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 4rem 0;
+            background: #0b1120;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .social-icons { margin: 2rem 0; }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            color: var(--text-secondary);
+        }
+        .social-icons a:hover { color: var(--accent); transform: scale(1.1); display: inline-block;}
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified mobile nav */
+            .about-grid { grid-template-columns: 1fr; }
+            section { padding: 4rem 5%; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Md. <span>Ripon</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="mailto:rmdmahbubulhaque@gmail.com" class="btn-nav">Hire Me</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="hero-content">
+            <div class="hero-subtitle">Hi, my name is</div>
+            <h1>Md Mahbubul Haque Ripon.</h1>
+            <h2 style="color: var(--text-secondary); font-size: 2rem; margin-bottom: 1.5rem;">I build intelligent systems.</h2>
+            <p class="hero-desc">
+                Computer Science Graduate & Machine Learning Engineer based in London. 
+                I specialize in Medical Computer Vision, Predictive Analytics, and building production-ready AI pipelines.
+            </p>
+            <div class="cta-group">
+                <a href="#projects" class="btn-primary">Check out my work</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <span></span>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                    Hello! I am a forward-thinking <strong>Computer Science graduate</strong> from the <strong>University of Greenwich</strong>. My interest in technology started with simple code, but it quickly evolved into a passion for <strong>Artificial Intelligence</strong> and solving complex problems with data.
+                </p>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                    I recently completed the <strong>IBM AI Developer Professional Certificate</strong>, bridging the gap between academic theory and real-world application. I have hands-on experience building <strong>Generative AI applications</strong> and high-precision <strong>medical image segmentation models</strong>.
+                </p>
+                <p style="color: var(--text-secondary);">
+                    When I'm not coding, I'm refining my soft skills in high-pressure environments, learning how to manage time effectively and deliver results under tight deadlines.
+                </p>
+            </div>
+            <div class="about-edu">
+                <div class="edu-card">
+                    <span class="edu-year">2021 - 2025</span>
+                    <h3>BSc (Hons) Computer Science</h3>
+                    <div class="edu-school">University of Greenwich, London</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Second Class Honours, 1st Division</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-year">2024</span>
+                    <h3>IBM AI Developer Professional Certificate</h3>
+                    <div class="edu-school">Coursera</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Generative AI, Prompt Engineering, APIs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <span></span>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <h3>ML & Deep Learning</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> PyTorch & TensorFlow</li>
+                    <li><i class="fas fa-check"></i> Scikit-learn & XGBoost</li>
+                    <li><i class="fas fa-check"></i> Transformers & CNNs</li>
+                    <li><i class="fas fa-check"></i> Generative AI & LLMs</li>
+                    <li><i class="fas fa-check"></i> Computer Vision (3D U-Net)</li>
+                </ul>
+            </div>
+            
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Data Science</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Pandas & NumPy</li>
+                    <li><i class="fas fa-check"></i> Data Visualization (Matplotlib)</li>
+                    <li><i class="fas fa-check"></i> Feature Engineering</li>
+                    <li><i class="fas fa-check"></i> Time-Series Analysis</li>
+                    <li><i class="fas fa-check"></i> Handling Imbalanced Data (SMOTE)</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <h3>Tools & Deployment</h3>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check"></i> Python, Java, SQL</li>
+                    <li><i class="fas fa-check"></i> Docker & Git</li>
+                    <li><i class="fas fa-check"></i> Flask REST APIs</li>
+                    <li><i class="fas fa-check"></i> Gradio & Jupyter</li>
+                    <li><i class="fas fa-check"></i> IBM Watson Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <span></span>
+        </div>
+
+        <div class="project-card">
+            <div class="project-content">
+                <span class="project-overline">Medical Computer Vision</span>
+                <h3 class="project-title">Brain Tumour Detection with 3D U-Net</h3>
+                <p class="project-desc">
+                    Engineered a hybrid deep learning architecture for high-precision segmentation of tumours from 3D MRI scans. This project utilized MONAI and PyTorch to assist in automated tumour volume estimation.
+                    <br><br>
+                    <strong style="color: var(--accent)">Key Result:</strong> Achieved a Dice Similarity Coefficient (DSC) of 96% on public datasets, outperforming baseline models.
+                </p>
+                <div class="tech-stack">
+                    <span>PyTorch</span>
+                    <span>3D U-Net</span>
+                    <span>Transformers</span>
+                    <span>Medical Imaging</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/mahbub19601" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-content">
+                <span class="project-overline">FinTech Security</span>
+                <h3 class="project-title">Real-Time Credit Card Fraud Detection</h3>
+                <p class="project-desc">
+                    Developed an end-to-end Machine Learning pipeline to identify fraudulent transactions in highly imbalanced datasets. Implemented SMOTE for oversampling and trained an XGBoost classifier.
+                    <br><br>
+                    <strong style="color: var(--accent)">Key Result:</strong> Achieved a 94% Recall rate and deployed the model as a Flask API to simulate low-latency inference.
+                </p>
+                <div class="tech-stack">
+                    <span>XGBoost</span>
+                    <span>Flask API</span>
+                    <span>SMOTE</span>
+                    <span>Python</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/mahbub19601" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-content">
+                <span class="project-overline">Generative AI</span>
+                <h3 class="project-title">"Babel Fish" AI Universal Translator</h3>
+                <p class="project-desc">
+                    Built a voice-enabled translation application utilizing Google's Flan-T5 model and Gradio. This application enables real-time translation of spoken language, demonstrating the practical application of Large Language Models (LLMs).
+                </p>
+                <div class="tech-stack">
+                    <span>LLMs</span>
+                    <span>Google Flan-T5</span>
+                    <span>Gradio</span>
+                    <span>Speech-to-Text</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/mahbub19601" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contact">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Get In Touch</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem auto;">
+            I am currently looking for new opportunities as a Machine Learning Engineer. Whether you have a question or just want to say hi, my inbox is always open!
+        </p>
+        
+        <a href="mailto:rmdmahbubulhaque@gmail.com" class="btn-primary" style="display: inline-block; margin-bottom: 2rem;">Say Hello</a>
+
+        <div class="social-icons">
+            <a href="https://github.com/mahbub19601" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/rnmahbub" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rmdmahbubulhaque@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <p style="color: var(--text-secondary); font-size: 0.8rem;">
+            &copy; 2026 Md Mahbubul Haque Ripon. Built by hand.
+        </p>
+    </footer>
+
+</body>
+</html>
