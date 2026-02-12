@@ -103,12 +103,14 @@
             justify-content: center;
         }
 
+        /* --- UPDATED IMAGE STYLES HERE --- */
         .hero-image {
             width: 380px;
             height: 380px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center top;
+            /* Changed from 'center top' to 'center' to fix face position */
+            object-position: center; 
             border: 4px solid var(--accent-color);
             box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
         }
@@ -293,7 +295,7 @@
                 <p class="hero-description">
                     Forward-thinking Computer Science graduate and IBM Certified AI Developer. 
                     Specializing in building production-ready pipelines for Medical Computer Vision, 
-                    [cite_start]Predictive Analytics, and Generative AI solutions. [cite: 35, 37, 38, 39, 57]
+                    Predictive Analytics, and Generative AI solutions.
                 </p>
                 <a href="#projects" class="btn btn-primary">Explore My Work</a>
             </div>
@@ -312,13 +314,13 @@
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        [cite_start]I am a driven **Computer Science graduate** from the University of Greenwich, where I developed a rigorous academic foundation in AI and machine learning[cite: 38, 61, 62]. My passion lies in transforming complex data into actionable intelligence.
+                        I am a driven **Computer Science graduate** from the University of Greenwich, where I developed a rigorous academic foundation in AI and machine learning. My passion lies in transforming complex data into actionable intelligence.
                     </p>
                     <p>
-                        [cite_start]Recently, I earned the **IBM AI Developer Professional Certificate**, mastering the practical application of **Generative AI** and API integration with tools like OpenAI and IBM Watson[cite: 39, 64, 65]. [cite_start]I have proven expertise in developing advanced solutions, from high-precision medical image analysis to real-time conversational agents[cite: 5, 6].
+                        Recently, I earned the **IBM AI Developer Professional Certificate**, mastering the practical application of **Generative AI** and API integration with tools like OpenAI and IBM Watson. I have proven expertise in developing advanced solutions, from high-precision medical image analysis to real-time conversational agents.
                     </p>
                     <p>
-                        [cite_start]Beyond technical skills, my experience in high-pressure environments has honed my ability to manage time effectively and solve problems efficiently—critical assets for any agile software team[cite: 69].
+                        Beyond technical skills, my experience in high-pressure environments has honed my ability to manage time effectively and solve problems efficiently—critical assets for any agile software team.
                     </p>
                 </div>
                 <div class="about-edu">
@@ -326,13 +328,13 @@
                         <span class="edu-year">2021 - 2025</span>
                         <h3>BSc (Hons) Computer Science</h3>
                         <div class="edu-school">University of Greenwich, London</div>
-                        [cite_start]<p class="edu-school">Second Class Honours, 1st Division [cite: 61, 62]</p>
+                        <p class="edu-school">Second Class Honours, 1st Division</p>
                     </div>
                     <div class="edu-card">
                         <span class="edu-year">2024</span>
                         <h3>IBM AI Developer Professional Certificate</h3>
                         <div class="edu-school">Coursera</div>
-                        [cite_start]<p class="edu-school">Generative AI, Prompt Engineering, APIs [cite: 64, 65]</p>
+                        <p class="edu-school">Generative AI, Prompt Engineering, APIs</p>
                     </div>
                 </div>
             </div>
@@ -397,9 +399,9 @@
                     <span class="project-overline">Medical Computer Vision</span>
                     <h3 class="project-title">Brain Tumour Detection with 3D U-Net</h3>
                     <p class="project-desc">
-                        Engineered a hybrid deep learning architecture for high-precision segmentation of tumours from 3D MRI scans. [cite_start]This project utilized MONAI and PyTorch to assist in automated tumour volume estimation[cite: 58].
+                        Engineered a hybrid deep learning architecture for high-precision segmentation of tumours from 3D MRI scans. This project utilized MONAI and PyTorch to assist in automated tumour volume estimation.
                         <br><br>
-                        [cite_start]<strong style="color: var(--accent-color)">Key Result:</strong> Achieved a Dice Similarity Coefficient (DSC) of 96% on public datasets, outperforming baseline models[cite: 59].
+                        <strong style="color: var(--accent-color)">Key Result:</strong> Achieved a Dice Similarity Coefficient (DSC) of 96% on public datasets, outperforming baseline models.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">PyTorch</span>
@@ -418,9 +420,9 @@
                     <span class="project-overline">FinTech Security</span>
                     <h3 class="project-title">Real-Time Credit Card Fraud Detection</h3>
                     <p class="project-desc">
-                        [cite_start]Developed an end-to-end Machine Learning pipeline to identify fraudulent transactions in highly imbalanced datasets[cite: 49]. [cite_start]Implemented SMOTE for oversampling and trained an XGBoost classifier[cite: 50].
+                        Developed an end-to-end Machine Learning pipeline to identify fraudulent transactions in highly imbalanced datasets. Implemented SMOTE for oversampling and trained an XGBoost classifier.
                         <br><br>
-                        [cite_start]<strong style="color: var(--accent-color)">Key Result:</strong> Achieved a 94% Recall rate and deployed the model as a Flask API to simulate low-latency inference[cite: 50, 51].
+                        <strong style="color: var(--accent-color)">Key Result:</strong> Achieved a 94% Recall rate and deployed the model as a Flask API to simulate low-latency inference.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">XGBoost</span>
@@ -439,7 +441,7 @@
                     <span class="project-overline">Generative AI</span>
                     <h3 class="project-title">"Babel Fish" AI Universal Translator</h3>
                     <p class="project-desc">
-                        [cite_start]Built a voice-enabled translation application utilizing Google's Flan-T5 model and Gradio[cite: 21]. [cite_start]This application enables real-time translation of spoken language, demonstrating the practical application of Large Language Models (LLMs)[cite: 22].
+                        Built a voice-enabled translation application utilizing Google's Flan-T5 model and Gradio. This application enables real-time translation of spoken language, demonstrating the practical application of Large Language Models (LLMs).
                     </p>
                     <div class="tech-stack">
                         <span class="tech-badge">LLMs</span>
@@ -482,7 +484,7 @@
             <h2 style="font-size: 2rem; margin-bottom: 1rem;">Let's Connect</h2>
             <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2.5rem auto;">
                 I am currently looking for new opportunities as a Machine Learning Engineer. 
-                [cite_start]Whether you have a question or just want to say hi, my inbox is always open! [cite: 36]
+                Whether you have a question or just want to say hi, my inbox is always open!
             </p>
             
             <a href="mailto:rmdmahbubulhaque@gmail.com" class="btn btn-primary">Say Hello</a>
