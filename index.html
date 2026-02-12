@@ -18,6 +18,7 @@
             --accent: #38bdf8;
             --accent-glow: rgba(56, 189, 248, 0.3);
             --gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+            --insta-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
 
         * {
@@ -252,6 +253,41 @@
         .project-links a { font-size: 1.2rem; }
         .project-links a:hover { color: var(--accent); }
 
+        /* --- Instagram / Content Section --- */
+        .insta-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+        
+        .insta-card:hover {
+            border-color: #d62976; /* Instagram Pink */
+            transform: translateY(-5px);
+        }
+
+        .insta-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--insta-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-insta {
+            background: var(--insta-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+        
+        .btn-insta:hover { opacity: 0.9; transform: translateY(-2px); }
+
         /* --- About & Education --- */
         .about-grid {
             display: grid;
@@ -309,6 +345,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#content">Content</a></li>
             <li><a href="mailto:rmdmahbubulhaque@gmail.com" class="btn-nav">Hire Me</a></li>
         </ul>
     </nav>
@@ -477,6 +514,26 @@
 
     </section>
 
+    <section id="content">
+        <div class="section-header">
+            <h2>Content Creation</h2>
+            <span></span>
+        </div>
+        <div class="insta-card">
+            <div class="insta-icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <h3 class="project-title">@zemparadox</h3>
+            <p class="project-desc" style="max-width: 600px; margin: 0 auto;">
+                Beyond code, I am a content creator sharing my journey in Tech, AI, and lifestyle. 
+                Check out my page for visual stories, behind-the-scenes of my projects, and daily insights.
+            </p>
+            <a href="https://www.instagram.com/zemparadox/" target="_blank" class="btn-insta">
+                Follow on Instagram
+            </a>
+        </div>
+    </section>
+
     <footer id="contact">
         <h2 style="font-size: 2rem; margin-bottom: 1rem;">Get In Touch</h2>
         <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem auto;">
@@ -488,6 +545,7 @@
         <div class="social-icons">
             <a href="https://github.com/mahbub19601" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/rnmahbub" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/zemparadox/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="mailto:rmdmahbubulhaque@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
 
